@@ -43,8 +43,16 @@
                 <div class="form-group form-check">
                     <input name="remember" value="1" type="checkbox" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">Nhớ tên tài khoản</label>
+                    
                 </div>
+                
+                <c:if test="${sessionScope.acc == null}">
+                    <div>
+                        <a href="forgotPassword">Quên mật khẩu</a>
+                    </div>
+                </c:if>
 
+                
                 <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Đăng nhập</button>
                 <hr>
                 <p class="text-center">Bạn chưa có tài khoản?</p><button class="btn btn-primary btn-block" type="button" id="btn-signup"><i class="fas fa-user-plus"></i> Đăng ký</button>
@@ -87,7 +95,7 @@
             
             window.addEventListener("load",function loadAmountCart(){
                         	 $.ajax({
-                                 url: "/WebsiteBanGiay/loadAllAmountCart",
+                                 url: "/WebsiteTraHoa/loadAllAmountCart",
                                  type: "get", //send it through get method
                                  data: {
                                      

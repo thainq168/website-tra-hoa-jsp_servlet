@@ -16,6 +16,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link href="css/manager.css" rel="stylesheet" type="text/css"/>
+        
         <style>
             img{
                 width: 200px;
@@ -29,7 +30,7 @@
                 <div class="table-title">
                     <div class="row">
                         <div class="col-sm-6">
-                            <h2>Edit <b>Product</b></h2>
+                            <h2>Chỉnh sửa <b>Sản phẩm</b></h2>
                         </div>
                         <div class="col-sm-6">
                         </div>
@@ -41,7 +42,7 @@
                     <div class="modal-content">
                         <form action="edit" method="post">
                             <div class="modal-header">						
-                                <h4 class="modal-title">Edit Product</h4>
+                                <h4 class="modal-title">Chỉnh sửa sản phẩm</h4>
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                             </div>
                             <div class="modal-body">					
@@ -50,31 +51,31 @@
                                     <input value="${detail.id}" name="id" type="hidden" class="form-control" readonly required>
                                 </div> 
                                 <div class="form-group">
-                                    <label>Name</label>
+                                    <label>Tên</label>
                                     <input value="${detail.name}" name="name" type="text" class="form-control" required>
                                 </div>
                                 <div class="form-group">
-                                    <label>Image</label>
+                                    <label>Ảnh</label>
                                     <input value="${detail.image}" name="image" type="text" class="form-control" >
                                 </div>
                                 <div class="form-group">
-                                    <label>Image 2</label>
+                                    <label>Ảnh 2</label>
                                     <input value="${detail.image2}" name="image2" type="text" class="form-control" >
                                 </div>
                                 <div class="form-group">
-                                    <label>Image 3</label>
+                                    <label>Ảnh 3</label>
                                     <input value="${detail.image3}" name="image3" type="text" class="form-control" >
                                 </div>
                                 <div class="form-group">
-                                    <label>Image 4</label>
+                                    <label>Ảnh 4</label>
                                     <input value="${detail.image4}" name="image4" type="text" class="form-control" >
                                 </div>
                                 <div class="form-group">
-                                    <label>Price</label>
+                                    <label>Giá</label>
                                     <input value="${detail.price}" name="price" type="text" class="form-control" >
                                 </div>
                                 <div class="form-group">
-                                    <label>Title</label>
+                                    <label>Tiêu đề</label>
                                     <textarea name="title" class="form-control" required>${detail.title}</textarea>
                                 </div>
                                   <div class="form-group">
@@ -90,11 +91,11 @@
                                     <textarea name="delivery" class="form-control" required>${detail.delivery}</textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label>Description</label>
+                                    <label>Mô tả</label>
                                     <textarea name="description" class="form-control" >${detail.description}</textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label>Category</label>
+                                    <label>Phân loại</label>
                                     <select name="category" class="form-select" aria-label="Default select example">
                                         <c:forEach items="${listCC}" var="o">
                                             <option value="${o.cid}">${o.cname}</option>
@@ -104,7 +105,7 @@
 
                             </div>
                             <div class="modal-footer">
-                                <input type="submit" class="btn btn-success" value="Edit">
+                                <input type="submit" class="btn btn-success" value="Lưu">
                             </div>
                         </form>
                     </div>

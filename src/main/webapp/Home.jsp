@@ -177,7 +177,7 @@
                                         <p class="card-text show_txt">${o.title}</p>
                                         <div class="row">
                                             <div class="col">
-                                                <p class="btn btn-success btn-block">${o.price} $</p>
+                                                <p class="btn btn-light btn-block">${String.format("%.0f",o.price) } đ</p>
                                             </div> 
                                         </div>
                                     </div>
@@ -192,7 +192,7 @@
             
             
              <div class="row" style="margin-top:25px">            
-				<h1 style="text-align:center; width:100%" id="nike">TRÀ HOA CÚC</h1>
+				<h1 style="text-align:center; width:100%" id="nike">TRÀ HOA NHÀI</h1>
                     <div class="col-sm-12">
                         <div id="contentNike" class="row">
                         <c:forEach items="${list4NikeLast}" var="o">
@@ -206,7 +206,7 @@
                                         <p class="card-text show_txt">${o.title}</p>
                                         <div class="row">
                                             <div class="col">
-                                                <p class="btn btn-success btn-block">${o.price} $</p>
+                                                <p class="btn btn-light btn-block">${String.format("%.0f",o.price) } đ</p>
                                             </div>
                                             
                                         </div>
@@ -215,13 +215,13 @@
                             </div>
                         </c:forEach>
                     </div>
-                   <button onclick="loadMoreNike()" class="btn btn-dark">Load more</button>
+                   <button onclick="loadMoreNike()" class="btn btn-dark">Xem thêm</button>
                 </div>
             </div>
             
             
               <div class="row" style="margin-top:25px">            
-				<h1 style="text-align:center; width:100%" id="adidas">TRÀ HOA NHÀI</h1>
+				<h1 style="text-align:center; width:100%" id="adidas">TRÀ HOA CÚC</h1>
                     <div class="col-sm-12">
                         <div id="contentAdidas" class="row">
                         <c:forEach items="${list4AdidasLast}" var="o">
@@ -235,7 +235,7 @@
                                         <p class="card-text show_txt">${o.title}</p>
                                         <div class="row">
                                             <div class="col">
-                                                <p class="btn btn-success btn-block">${o.price} $</p>
+                                                <p class="btn btn-light btn-block">${String.format("%.0f",o.price) } đ</p>
                                             </div>
                                            
                                         </div>
@@ -244,7 +244,7 @@
                             </div>
                         </c:forEach>
                     </div>
-                   <button onclick="loadMoreAdidas()" class="btn btn-dark">Load more</button>
+                   <button onclick="loadMoreAdidas()" class="btn btn-dark">Xem thêm</button>
                 </div>
             </div>
             
@@ -283,7 +283,7 @@
         	 function loadMore() {
                  var amount = document.getElementsByClassName("product").length;
                  $.ajax({
-                     url: "/WebsiteBanGiay/load",
+                     url: "/WebsiteTraHoa/load",
                      type: "get", //send it through get method
                      data: {
                          exits: amount
@@ -300,7 +300,7 @@
         	 function loadMoreNike() {
                  var amountNike = document.getElementsByClassName("productNike").length;
                  $.ajax({
-                     url: "/WebsiteBanGiay/loadNike",
+                     url: "/WebsiteTraHoa/loadNike",
                      type: "get", //send it through get method
                      data: {
                          exitsNike: amountNike
@@ -317,7 +317,7 @@
         	 function loadMoreAdidas() {
                  var amountAdidas = document.getElementsByClassName("productAdidas").length;
                  $.ajax({
-                     url: "/WebsiteBanGiay/loadAdidas",
+                     url: "/WebsiteTraHoa/loadAdidas",
                      type: "get", //send it through get method
                      data: {
                          exitsAdidas: amountAdidas
@@ -334,7 +334,7 @@
              function searchByName(param){
                  var txtSearch = param.value;
                  $.ajax({
-                     url: "/WebsiteBanGiay/searchAjax",
+                     url: "/WebsiteTraHoa/searchAjax",
                      type: "get", //send it through get method
                      data: {
                          txt: txtSearch
@@ -350,7 +350,7 @@
              }
              function load(cateid){
              	 $.ajax({
-                      url: "/WebsiteBanGiay/category",
+                      url: "/WebsiteTraHoa/category",
                       type: "get", //send it through get method
                       data: {
                           cid: cateid
@@ -362,7 +362,7 @@
              }    
              function loadAmountCart(){
              	 $.ajax({
-                      url: "/WebsiteBanGiay/loadAllAmountCart",
+                      url: "/WebsiteTraHoa/loadAllAmountCart",
                       type: "get", //send it through get method
                       data: {
                           

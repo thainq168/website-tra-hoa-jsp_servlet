@@ -6,9 +6,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Giỏ hàng</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		
+		<link href="css/style.css" rel="stylesheet" type="text/css"/>
     </head>
 
     <body onload="loadTotalMoney()">
@@ -42,21 +42,19 @@
                                                     <th scope="col" class="border-0 bg-light">
                                                         <div class="py-2 text-uppercase">Đơn Giá</div>
                                                     </th>
-                                                     <th scope="col" class="border-0 bg-light">
-                                                        <div class="py-2 text-uppercase">Màu Sắc</div>
-                                                    </th>
+                                                
                                                      <th scope="col" class="border-0 bg-light">
                                                         <div class="py-2 text-uppercase">Delivery</div>
                                                     </th>
-                                                     <th scope="col" class="border-0 bg-light">
-                                                        <div class="py-2 text-uppercase">Kích Thước</div>
-                                                    </th>
+                                                   
                                                     <th scope="col" class="border-0 bg-light">
                                                         <div class="py-2 text-uppercase">Số Lượng</div>
                                                     </th>
+                                                    
                                                     <th scope="col" class="border-0 bg-light">
-                                                        <div class="py-2 text-uppercase">Xóa</div>
+                                                        <div class="py-2 text-uppercase"></div>
                                                     </th>
+                                              
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -74,13 +72,11 @@
                                                             </div>
                                                         </div>
                                                     </th>
-                                                    <td class="align-middle"><strong>${p.price}$</strong></td>
-                                                    <td class="align-middle"><strong>${p.color}</strong></td>
+                                                    <td class="align-middle"><strong>${String.format("%.0f", p.price)} đ</strong></td>
+                                                 
                                                     <td class="align-middle"><strong>${p.delivery}</strong></td>
                                                     
-                     <td class="align-middle">
-                     	<strong>${o.size}</strong>
-                    </td>
+                     
                     
                                                     <td class="align-middle">
                                                         <a href="subAmountCart?productID=${o.productID}&amount=${o.amount}"><button class="btnSub">-</button></a> 
@@ -88,7 +84,7 @@
                                                         <a href="addAmountCart?productID=${o.productID}&amount=${o.amount}"><button class="btnAdd">+</button></a>
                                                     </td>
                                                     <td class="align-middle"><a href="deleteCart?productID=${o.productID }" class="text-dark">
-                                                            <button type="button" class="btn btn-danger">Delete</button>
+                                                            <button type="button" class="btn btn-danger">Xóa</button>
                                                         </a>
                                                     </td>
                                                 </tr> 
@@ -131,7 +127,7 @@
         <script>
                         function loadTotalMoney(){
                         	 $.ajax({
-                                 url: "/WebsiteBanGiay/totalMoneyCart",
+                                 url: "/WebsiteTraHoa/totalMoneyCart",
                                  type: "get", //send it through get method
                                  data: {
                                     
@@ -144,7 +140,7 @@
                         
                         window.addEventListener("load",function loadAmountCart(){
                         	 $.ajax({
-                                 url: "/WebsiteBanGiay/loadAllAmountCart",
+                                 url: "/WebsiteTraHoa/loadAllAmountCart",
                                  type: "get", //send it through get method
                                  data: {
                                      

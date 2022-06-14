@@ -8,7 +8,7 @@
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Material Design Bootstrap</title>
+  <title>Sản phẩm</title>
   <!-- Roboto Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap">
   <!-- Font Awesome -->
@@ -247,7 +247,7 @@
                   <div class="text-center pt-4">
 
                     <h5>${o.name }</h5>
-                    <p><span class="mr-1"><strong>${o.price } VNĐ</strong></span></p>
+                    <p><span class="mr-1"><strong>${String.format("%.0f", o.price )} đ</strong></span></p>
 
                   </div>
 
@@ -307,7 +307,7 @@
     });
     function load(cateid){
     	 $.ajax({
-             url: "/WebsiteBanGiay/categoryShop",
+             url: "/WebsiteTraHoa/categoryShop",
              type: "get", //send it through get method
              data: {
                  cid: cateid
@@ -320,7 +320,7 @@
     function searchByName(param){
         var txtSearch = param.value;
         $.ajax({
-            url: "/WebsiteBanGiay/searchAjaxShop",
+            url: "/WebsiteTraHoa/searchAjaxShop",
             type: "get", //send it through get method
             data: {
                 txt: txtSearch
@@ -338,7 +338,7 @@
         var numMin = document.getElementById("priceMin").value;
         var numMax = document.getElementById("priceMax").value;
         $.ajax({
-            url: "/WebsiteBanGiay/searchAjaxPriceMinToMax",
+            url: "/WebsiteTraHoa/searchAjaxPriceMinToMax",
             type: "get", //send it through get method
             data: {
                 priceMin: numMin,
@@ -355,7 +355,7 @@
     }
     function searchByPriceUnder100(){
         $.ajax({
-            url: "/WebsiteBanGiay/searchAjaxPriceUnder100Shop",
+            url: "/WebsiteTraHoa/searchAjaxPriceUnder100Shop",
             type: "get", //send it through get method
             data: {
                
@@ -371,7 +371,7 @@
     }
     function searchByPrice100To200(){
         $.ajax({
-            url: "/WebsiteBanGiay/searchAjaxPrice100To200Shop",
+            url: "/WebsiteTraHoa/searchAjaxPrice100To200Shop",
             type: "get", //send it through get method
             data: {
                
@@ -387,7 +387,7 @@
     }
     function searchByPriceAbove200(){
         $.ajax({
-            url: "/WebsiteBanGiay/searchAjaxPriceAbove200Shop",
+            url: "/WebsiteTraHoa/searchAjaxPriceAbove200Shop",
             type: "get", //send it through get method
             data: {
                
@@ -403,7 +403,7 @@
     }
     function searchByColorWhite(){
         $.ajax({
-            url: "/WebsiteBanGiay/searchAjaxColorWhite",
+            url: "/WebsiteTraHoa/searchAjaxColorWhite",
             type: "get", //send it through get method
             data: {
                
@@ -419,7 +419,7 @@
     }
     function searchByColorGray(){
         $.ajax({
-            url: "/WebsiteBanGiay/searchAjaxColorGray",
+            url: "/WebsiteTraHoa/searchAjaxColorGray",
             type: "get", //send it through get method
             data: {
                
@@ -435,7 +435,7 @@
     }
     function searchByColorBlack(){
         $.ajax({
-            url: "/WebsiteBanGiay/searchAjaxColorBlack",
+            url: "/WebsiteTraHoa/searchAjaxColorBlack",
             type: "get", //send it through get method
             data: {
                
@@ -451,7 +451,7 @@
     }
     function searchByColorYellow(){
         $.ajax({
-            url: "/WebsiteBanGiay/searchAjaxColorYellow",
+            url: "/WebsiteTraHoa/searchAjaxColorYellow",
             type: "get", //send it through get method
             data: {
                
@@ -467,7 +467,7 @@
     }
     function loadAmountCart(){
     	 $.ajax({
-             url: "/WebsiteBanGiay/loadAllAmountCart",
+             url: "/WebsiteTraHoa/loadAllAmountCart",
              type: "get", //send it through get method
              data: {
                  

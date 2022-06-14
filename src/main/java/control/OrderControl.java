@@ -134,27 +134,28 @@ public class OrderControl extends HttpServlet {
 				email.setTo(emailAddress);
 				email.setSubject("Dat hang thanh cong tu Shoes Family");
 				StringBuilder sb = new StringBuilder();
-				sb.append("Dear ").append(name).append("<br>");
-				sb.append("Ban vua dat dang tu Shoes Family. <br> ");
-				sb.append("Dia chi nhan hang cua ban la: <b>").append(deliveryAddress).append(" </b> <br>");
-				sb.append("So dien thoai khi nhan hang cua ban la: <b>").append(phoneNumber).append(" </b> <br>");
-				sb.append("Cac san pham ban dat la: <br>");
+				sb.append("Thân chào ").append(name).append("<br>");
+				sb.append("Bạn vừa đặt đơn hàng từ Camellia. <br> ");
+				sb.append("Địa chỉ nhận hàng: <b>").append(deliveryAddress).append(" </b> <br>");
+				sb.append("Số điện thoại nhận hàng: <b>").append(phoneNumber).append(" </b> <br>");
+				sb.append("Thông tin đơn hàng: <br>");
 				for(Cart c : list) {
 					for(Product p : list2) {
 						if(c.getProductID()==p.getId()) {
-							sb.append(p.getName()).append(" | ").append("Price:").append(p.getPrice()).append("$").append(" | ").append("Amount:").append(c.getAmount()).append(" | ").append("Size:").append(c.getSize()).append("<br>");
+							sb.append(p.getName()).append(" | ").append("Giá:").append(p.getPrice()).append(" VNĐ").append(" | ").append("Amount:").append(c.getAmount()).append("<br>");
 						}
 					}
 				}
-				sb.append("Tong Tien: ").append(String.format("%.02f",totalMoneyVAT)).append("$").append("<br>");
-				sb.append("Cam on ban da dat hang tai Shoes Family<br>");
-				sb.append("Chu cua hang");
+				sb.append("Tổng tiền: ").append(String.format("%.02f",totalMoneyVAT)).append(" VNĐ").append("<br>");
+				sb.append("Cảm ơn bạn đã đặt hàng tại Camellia.<br>");
+				sb.append("Camellia");
 				
 				email.setContent(sb.toString());
 				EmailUtils.send(email);
 				request.setAttribute("mess", "Dat hang thanh cong!");
 				
 				dao.deleteCartByAccountID(accountID);
+				
 				
 				
 				//new code

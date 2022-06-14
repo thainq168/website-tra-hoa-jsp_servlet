@@ -200,7 +200,7 @@
     function searchByDate(param){
         var txtSearchDate = param.value;
         $.ajax({
-            url: "/WebsiteBanGiay/searchAjaxHoaDon",
+            url: "/WebsiteTraHoa/searchAjaxHoaDon",
             type: "get", //send it through get method
             data: {
                 ngayXuat: txtSearchDate

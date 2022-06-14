@@ -160,8 +160,8 @@
 
             <h5>${detail.name}</h5>
         
-            <p><span class="mr-1"><strong>${String.format("%.0f",detail.price*0.9) } VNĐ</strong></span><span
-                    class="text-grey"><strong><s>${String.format("%.0f",detail.price) } VNĐ</s></strong></span></p>
+            <p><span class="mr-1"><strong>${String.format("%.0f",o.price*0.9)} đ</strong></span><span
+                    class="text-grey"><strong><s>${String.format("%.0f",o.price)} đ</s></strong></span></p>
             
                     
             <p class="pt-1">${detail.description}</p>
@@ -365,8 +365,8 @@
               <div class="pt-4">
 
                 <h5>${o.title }</h5>
-                <p><span class="text-danger mr-1"><strong>${String.format("%.0f",o.price*0.9) } VNĐ</strong></span><span
-                    class="text-grey"><strong><s>${String.format("%.0f",o.price) } VNĐ</s></strong></span></p>
+                <p><span class="text-danger mr-1"><strong>${String.format("%.0f",o.price*0.9)} đ</strong></span><span
+                    class="text-grey"><strong><s>${String.format("%.0f",o.price)} đ</s></strong></span></p>
                     
                
 
@@ -396,7 +396,7 @@
        <script>
         window.addEventListener("load",function loadAmountCart(){
                         	 $.ajax({
-                                 url: "/WebsiteBanGiay/loadAllAmountCart",
+                                 url: "/WebsiteTraHoa/loadAllAmountCart",
                                  type: "get", //send it through get method
                                  data: {
                                      
@@ -410,7 +410,7 @@
         function addReview(pID){
            var cntReview = document.getElementById("form76").value;
             $.ajax({
-                url: "/WebsiteBanGiay/addReview",
+                url: "/WebsiteTraHoa/addReview",
                 type: "get", //send it through get method
                 data: {
                 	productID: pID,

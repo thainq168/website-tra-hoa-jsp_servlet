@@ -82,7 +82,7 @@
             
             window.addEventListener("load",function loadAmountCart(){
                         	 $.ajax({
-                                 url: "/WebsiteBanGiay/loadAllAmountCart",
+                                 url: "/WebsiteTraHoa/loadAllAmountCart",
                                  type: "get", //send it through get method
                                  data: {
                                      

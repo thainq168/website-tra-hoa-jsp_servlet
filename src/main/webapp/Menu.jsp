@@ -3,8 +3,7 @@
 <!--begin of menu-->
 <nav class="navbar navbar-expand-md" style="position: fixed; top: 0; width:100%;  z-index: 100000; background-color: #5b7553;">
     <div class="container">
-    	<img src"">
-        <a class="navbar-brand text-white" href="home"><i class="fa fa-leaf" aria-hidden="true"></i></a>
+        <a class="navbar-brand" href="home"><img src="https://i.imgur.com/AS4pXpc.png" style="width:150px;"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -36,21 +35,17 @@
                         <a class="nav-link" href="login">Đăng nhập</a>
                     </li>
                 </c:if>
-                <c:if test="${sessionScope.acc == null}">
-                    <li class="nav-item">
-                        <a class="nav-link" href="forgotPassword">Quên mật khẩu</a>
-                    </li>
-                </c:if>
+                
                 <c:if test="${sessionScope.acc != null}">
                     <li class="nav-item">
                         <a class="nav-link" href="EditProfile.jsp">Chỉnh sửa thông tin</a>
                     </li>
                 </c:if>
-               <%--  <c:if test="${sessionScope.acc.isAdmin == 1}">
+               <c:if test="${sessionScope.acc.isAdmin == 1}">
                     <li class="nav-item">
-                        <a class="nav-link" href="statistic">Statistic</a>
+                        <a class="nav-link" href="admin">Admin Dashboard</a>
                     </li>
-                </c:if> --%>
+                </c:if>
             </ul>
 
             <form action="search" method="post" class="form-inline my-2 my-lg-0">

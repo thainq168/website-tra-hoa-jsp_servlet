@@ -13,7 +13,7 @@ public class Product {
     private int id;
     private String name;
     private String image;
-    private double price;
+    private int price;
     private String title;
     private String description;
     private String model;
@@ -22,7 +22,7 @@ public class Product {
     private String image2;
     private String image3;
     private String image4;
-	public Product(int id, String name, String image, double price, String title, String description, String model,
+	public Product(int id, String name, String image, int price, String title, String description, String model,
 			String color, String delivery, String image2, String image3, String image4) {
 		
 		this.id = id;
@@ -68,7 +68,7 @@ public class Product {
 	public double getPrice() {
 		return price;
 	}
-	public void setPrice(double price) {
+	public void setPrice(int price) {
 		this.price = price;
 	}
 	public String getTitle() {
